@@ -1,7 +1,7 @@
 // homePage
 
 const homePage = async (req, res) => {
-  res.render(" index");
+  res.render("index", { title: "Food-Recipes" });
 };
 
 module.exports = {
