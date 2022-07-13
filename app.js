@@ -2,7 +2,6 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts"); // ---
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
@@ -18,6 +17,6 @@ const router = require("./server/routes/recipeRoute");
 
 app.use("/", router);
 
-app.listen(port, () => {
-  console.log(`Server running on ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on ${process.env.PORT}`);
 });

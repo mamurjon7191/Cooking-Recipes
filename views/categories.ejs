@@ -1,0 +1,19 @@
+<div class="container categories-title">
+<h1>Categories</h1>
+</div>
+
+<nav aria-label="breadcrumb" class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/" class="nav-link">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page" style="cursor:pointer">Categories</li>
+  </ol>
+</nav>
+
+<section class="category container">
+  <% if(category!=" "){ category.forEach((val,index)=>{ %>
+  <a class="category-item" href="<%- (val.name).split(" ")[0] %>">
+    <img src="/img/<%- val.img %>" alt="" />
+    <p><%- val.name %></p>
+  </a>
+  <%}) }%>
+</section>

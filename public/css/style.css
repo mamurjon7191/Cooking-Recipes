@@ -87,3 +87,37 @@ html {
   text-align: center;
   margin-top: 0.5rem;
 }
+.latest-recipe {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.latest-title {
+  display: flex;
+  justify-content: space-between;
+}
+.latest-title p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.latest-title a {
+  color: black;
+}
+.submit {
+  margin-top: 4rem;
+  align-items: center;
+}
+.submit-image {
+  width: 50%;
+  margin: 0 auto;
+}
+.submit-info {
+  text-align: center;
+}
+.submit-info p {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+#one {
+  justify-content: center;
+}

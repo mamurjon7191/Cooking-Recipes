@@ -17,28 +17,57 @@
 </section>
 
 <section class="category container">
-  <a class="category-item">
-    <img src="/img/american-food.jpg" alt="" />
-    <p>American food</p>
+  <% if(category!=" "){ category.forEach((val,index)=>{ %>
+  <a class="category-item" href="<%- (val.name).split(" ")[0] %>">
+    <img src="/img/<%- val.img %>" alt="" />
+    <p><%- val.name %></p>
   </a>
-  <a class="category-item">
-    <img src="/img/american-food.jpg" alt="" />
-    <p>American food</p>
-  </a>
-  <a class="category-item">
-    <img src="/img/american-food.jpg" alt="" />
-    <p>American food</p>
-  </a>
-  <a class="category-item">
-    <img src="/img/american-food.jpg" alt="" />
-    <p>American food</p>
-  </a>
-  <a class="category-item">
-    <img src="/img/american-food.jpg" alt="" />
-    <p>American food</p>
-  </a>
+  <%}) }%>
+
   <a class="category-item" href="/categories">
     <img src="/img/view-all.jpg" alt="" />
     <p>View All</p>
   </a>
+</section>
+
+<section class="latest container">
+  <div class="latest-title">
+    <p>Latest Recipes</p>
+    <a href="/explore-latest">View more</a>
+  </div>
+  <div class="latest-recipe">
+    <a class="category-item" href="/recipe/#">
+      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
+      <p>Chocolate Banoffe</p>
+    </a>
+    <a class="category-item" href="/recipe/#">
+      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
+      <p>Chocolate Banoffe</p>
+    </a>
+    <a class="category-item" href="/recipe/#">
+      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
+      <p>Chocolate Banoffe</p>
+    </a>
+    <a class="category-item" href="/recipe/#">
+      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
+      <p>Chocolate Banoffe</p>
+    </a>
+    <a class="category-item" href="/recipe/#">
+      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
+      <p>Chocolate Banoffe</p>
+    </a>
+  </div>
+</section>
+
+<section class="submit">
+  <div class="submit-image">
+    <img src="/img/publish-recipe.png" alt="" />
+  </div>
+  <div class="submit-info">
+    <h1>Publish your recipe for FREE today</h1>
+    <p>Publish your Recipe in front of thousands of people for free</p>
+  </div>
+  <div class="home-btn orta" id="one">
+    <a href="/submit" class="black">Submit Recipe</a>
+  </div>
 </section>
