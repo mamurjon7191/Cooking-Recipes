@@ -34,6 +34,30 @@ const categories = async (req, res) => {
 
 // categories page ends
 
+// recipeById
+const recipeById = async (req, res) => {
+  const recipeId = req.params.id;
+  const recipe = await RecipeModel.findById(recipeId);
+  console.log(recipe);
+  res.render("recipeById", { title: "Food-Recipes Recipe", recipe });
+};
+// recipeByIdEnds
+
+// categoriesById
+const categoriesById = async (req, res) => {
+  const significantCategoryId = req.params.id;
+  const significantCategory = await RecipeModel.find({
+    category: [significantCategoryId],
+  });
+  // console.log(significantCategory);
+  res.render("categoryById", {
+    title: "Food-Recipes Categories",
+    significantCategory,
+    significantCategoryId,
+  });
+};
+// categoriesByIdEnds
+
 async function insertDymayRecipeData() {
   try {
     await RecipeModel.insertMany([
@@ -469,4 +493,6 @@ async function insertDymayRecipeData() {
 module.exports = {
   homePage,
   categories,
+  recipeById,
+  categoriesById,
 };

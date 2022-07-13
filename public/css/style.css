@@ -122,3 +122,17 @@ html {
 #one {
   justify-content: center;
 }
+.recipeById {
+  padding-bottom: 2rem;
+  display: grid;
+  gap: 2rem;
+  align-items: flex-start;
+  grid-template-columns: 1fr 1fr;
+}
+.recipeById-left img {
+  width: 100%;
+}
+.two {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,32 @@
+<section>
+  <nav aria-label="breadcrumb" class="container two">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/" class="nav-link">Home</a></li>
+      <li
+        class="breadcrumb-item active"
+        aria-current="page"
+        style="cursor: pointer"
+      >
+        <%-recipe.name%>
+      </li>
+    </ol>
+  </nav>
+
+  <div class="recipeById container">
+    <div class="recipeById-left">
+      <img src="<%-recipe.image%>" alt="" />
+    </div>
+    <div class="recipeById-right">
+      <h1><%-recipe.name%></h1>
+      <h3>Cooking Instructions</h3>
+      <p><%-recipe.description%></p>
+
+      <div class="indegridents">
+        <h2>Ingredents:</h2>
+        <%recipe.ingredients.forEach((val)=>{%>
+        <h7><%-val%></h1>
+        <% })%>
+      </div>
+    </div>
+  </div>
+</section>

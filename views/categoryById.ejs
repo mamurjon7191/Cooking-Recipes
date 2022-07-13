@@ -1,0 +1,14 @@
+<section class="latest container" style="margin-top: 2rem">
+  <div class="latest-title">
+    <p><%-significantCategoryId%> food</p>
+  </div>
+  <div class="latest-recipe">
+    <% if(significantCategory!=" "){ significantCategory.forEach((val,index)=>{
+    %>
+    <a class="category-item" href="/recipe/<%- val._id %>">
+      <img src="<%- val.image%>" alt="<%- val.name %>" />
+      <p><%- val.name %></p>
+    </a>
+    <%}) }%>
+  </div>
+</section>
