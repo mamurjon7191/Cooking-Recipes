@@ -30,34 +30,75 @@
   </a>
 </section>
 
+
+<!-- Latest recipe -->
 <section class="latest container">
   <div class="latest-title">
     <p>Latest Recipes</p>
     <a href="/explore-latest">View more</a>
   </div>
   <div class="latest-recipe">
-    <a class="category-item" href="/recipe/#">
-      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
-      <p>Chocolate Banoffe</p>
-    </a>
-    <a class="category-item" href="/recipe/#">
-      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
-      <p>Chocolate Banoffe</p>
-    </a>
-    <a class="category-item" href="/recipe/#">
-      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
-      <p>Chocolate Banoffe</p>
-    </a>
-    <a class="category-item" href="/recipe/#">
-      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
-      <p>Chocolate Banoffe</p>
-    </a>
-    <a class="category-item" href="/recipe/#">
-      <img src="/img/chocolate-banoffe-whoopie-pies.jpg" alt="" />
-      <p>Chocolate Banoffe</p>
-    </a>
+    <% if(latestRecipe!=" "){ latestRecipe.forEach((val,index)=>{ %>
+      <a class="category-item" href="/recipe/<%- val._id %>">
+        <img src="<%- val.image%>" alt="<%- val.name %>" />
+        <p><%- val.name %></p>
+      </a>
+      <%}) }%>
   </div>
 </section>
+<!-- Latest recipe  ends-->
+
+<!-- American recipe -->
+<section class="latest container">
+  <div class="latest-title">
+    <p>American Recipes</p>
+    <a href="/explore-latest">View more</a>
+  </div>
+  <div class="latest-recipe">
+    <% if(food.american!=" "){ food.american.forEach((val,index)=>{ %>
+      <a class="category-item" href="/recipe/<%- val._id %>">
+        <img src="<%- val.image%>" alt="<%- val.name %>" />
+        <p><%- val.name %></p>
+      </a>
+      <%}) }%>
+  </div>
+</section>
+<!-- American recipe  ends-->
+
+<!-- Thai recipe -->
+<section class="latest container">
+  <div class="latest-title">
+    <p>Thai Recipes</p>
+    <a href="/explore-latest">View more</a>
+  </div>
+  <div class="latest-recipe">
+    <% if(food.thai!=" "){ food.thai.forEach((val,index)=>{ %>
+      <a class="category-item" href="/recipe/<%- val._id %>">
+        <img src="<%- val.image%>" alt="<%- val.name %>" />
+        <p><%- val.name %></p>
+      </a>
+      <%}) }%>
+  </div>
+</section>
+<!-- Thai recipe  ends-->
+
+<!-- Indian recipe -->
+<section class="latest container">
+  <div class="latest-title">
+    <p>Indian Recipes</p>
+    <a href="/explore-latest">View more</a>
+  </div>
+  <div class="latest-recipe">
+    <% if(food.indian!=" "){ food.indian.forEach((val,index)=>{ %>
+      <a class="category-item" href="/recipe/<%- val._id %>">
+        <img src="<%- val.image%>" alt="<%- val.name %>" />
+        <p><%- val.name %></p>
+      </a>
+      <%}) }%>
+  </div>
+</section>
+<!-- Indian recipe  ends-->
+ 
 
 <section class="submit">
   <div class="submit-image">

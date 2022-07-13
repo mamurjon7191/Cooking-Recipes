@@ -95,6 +95,7 @@ html {
 .latest-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .latest-title p {
   font-size: 2rem;

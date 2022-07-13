@@ -7,13 +7,17 @@ const data = [];
 // homePage
 
 const homePage = async (req, res) => {
-  // const latestRecipe = await RecipeModel.find().limit(5);
+  const latestRecipe = await RecipeModel.find().sort({ _id: -1 }).limit(5);
 
-  // console.log(latestRecipe);
+  const indian = await RecipeModel.find({ category: ["Indian"] }).limit(5);
+  const american = await RecipeModel.find({ category: ["American"] }).limit(5);
+  const thai = await RecipeModel.find({ category: ["Thai"] }).limit(5);
+
+  const food = { indian, american, thai };
 
   const category = await CategoryModel.find().limit(5);
 
-  res.render("index", { title: "Food-Recipes", category });
+  res.render("index", { title: "Food-Recipes", category, latestRecipe, food });
 };
 
 // homePage ends
